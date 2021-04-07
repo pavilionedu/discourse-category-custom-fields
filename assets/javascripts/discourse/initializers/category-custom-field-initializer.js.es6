@@ -85,9 +85,6 @@ export default {
        *              category = Category.find_by(slug: 'my-slug')
        *              category.send(fieldName)
        */
-       const site = container.lookup('site:main');
-       const category = site.categories.find(c => c.slug == 'journal')
-       console.log(category[fieldName]);
     });
   }
 }
