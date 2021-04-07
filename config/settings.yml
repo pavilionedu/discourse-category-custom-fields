@@ -1,0 +1,16 @@
+plugins:
+  category_custom_field_enabled:
+    default: true
+    client: true
+  category_custom_field_name:
+    default: 'my_field'
+    client: true
+  category_custom_field_type:
+    default: 'boolean'
+    client: true
+    type: enum
+    choices:
+      - string
+      - integer
+      - boolean
+      - json

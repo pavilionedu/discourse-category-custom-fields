@@ -1,0 +1,6 @@
+en:
+  js:
+    category_custom_field:
+      label: "%{field}: %{value}"
+      placeholder: "Enter a %{field}"
+      heading: "%{field} settings"

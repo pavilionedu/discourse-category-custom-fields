@@ -1,0 +1,64 @@
+<h3>{{fieldHeading}}</h3>
+
+{{#if isBoolean}}
+  <section class='field'>
+    <label>
+      {{input
+        type="checkbox"
+        checked=(readonly fieldValue)
+        click=(action "onChangeField" value="target.checked")
+      }}
+      {{fieldName}}
+    </label>
+  </section>
+{{/if}}
+
+{{#if isInteger}}
+  <section class='field'>
+    <label>
+      {{fieldName}}
+    </label>
+    <div class="controls">
+      {{input
+        type="number"
+        value=(readonly fieldValue)
+        class="category-custom-field-input small"
+        input=(action "onChangeField" value="target.value")
+        placeholder=(i18n 'category_custom_field.placeholder' field=fieldName)
+      }}
+    </div>
+  </section>
+{{/if}}
+
+{{#if isString}}
+  <section class='field'>
+    <label>
+      {{fieldName}}
+    </label>
+    <div class="controls">
+      {{input
+        type="text"
+        value=(readonly fieldValue)
+        class="category-custom-field-input large"
+        input=(action "onChangeField" value="target.value")
+        placeholder=(i18n 'category_custom_field.placeholder' field=fieldName)
+      }}
+    </div>
+  </section>
+{{/if}}
+
+{{#if isJson}}
+  <section class='field'>
+    <label>
+      {{fieldName}}
+    </label>
+    <div class="controls">
+      {{textarea
+        value=(readonly fieldValue)
+        class="category-custom-field-textarea"
+        change=(action "onChangeField" value="target.value")
+        placeholder=(i18n 'category_custom_field.placeholder' field=fieldName)
+      }}
+    </div>
+  </section>
+{{/if}}

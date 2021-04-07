@@ -1,0 +1,16 @@
+.category-custom-field-input {
+  max-width: 100%;
+
+  &.small {
+    width: 150px;
+  }
+
+  &.large {
+    width: 475px;
+  }
+}
+
+.category-custom-field-textarea {
+  max-width: 100%;
+  width: 465px;
+}
